@@ -13,7 +13,7 @@ def printValuesOfInstance(INST, CLASS):
     print('value of B ' , CLASS.B)
     print('value of c ' , INST.c)
     print('value of d ' , INST.d)
-    print(locals())
+    #print('Arguments of this methods were:', locals())
     
 def main():
     
