@@ -2,9 +2,20 @@ class Demo:
     A = 10
     B = 20
 
-    def __init__(self):
+    def __init__(self)->None:
         self.c = 30
         self.d = 40
+        
+    @classmethod
+    def getClassVars(cls)->None:
+        print(cls.A, cls.B)
+
+    @staticmethod
+    def addition( *args:tuple)->int:
+        sum=0
+        for n in args:
+            sum+=n
+        return sum
 
 def printValuesOfInstance(INST, CLASS)->None:
     className = INST.__class__.__name__
@@ -16,7 +27,6 @@ def printValuesOfInstance(INST, CLASS)->None:
     #print('Arguments of this methods were:', locals())
     
 def main():
-    
     d = Demo()
     d2 = Demo()
     printValuesOfInstance(d, Demo)
@@ -25,6 +35,9 @@ def main():
     Demo.A +=1
     printValuesOfInstance(d, Demo)
     printValuesOfInstance(d2, Demo)
+
+    sum = Demo.addition(d.c, d2.c)
+    print(sum)
 
 if __name__ == '__main__':
     main()
