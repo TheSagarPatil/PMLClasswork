@@ -5,7 +5,8 @@ def main():
     no1 = int(input())
     print('Enter second no')
     no2 = int(input())
-    print(addition(no1, no2))
+    ret = addition(no1, no2)
+    print(ret)
 
 if __name__ == '__main__':
     main()
