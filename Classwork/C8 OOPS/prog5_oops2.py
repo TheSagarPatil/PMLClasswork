@@ -6,7 +6,7 @@ class Demo:
         self.c = 30
         self.d = 40
 
-def printValuesOfInstance(INST, CLASS):
+def printValuesOfInstance(INST, CLASS)->None:
     className = INST.__class__.__name__
     print('class :', className, '====')
     print('value of A ' , CLASS.A)
