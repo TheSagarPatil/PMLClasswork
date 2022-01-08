@@ -104,6 +104,7 @@ def main():
     print(A1.checkPrime(), A1.getFactors(), A1.getSumFactors(), A1.checkPerfect(), A1.getPerfectNumberMessage() )
     print(A2.checkPrime(), A2.getFactors(), A2.getSumFactors(), A2.checkPerfect(), A2.getPerfectNumberMessage() )
     print(A6.checkPrime(), A6.getFactors(), A6.getSumFactors(), A6.checkPerfect(), A6.getPerfectNumberMessage() )
+
 if __name__ == '__main__' :
     main()
 
