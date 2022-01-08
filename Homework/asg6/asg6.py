@@ -48,7 +48,7 @@ class Arithmatic():
             if(self.iValue <=5 ):
                 return 'Perfect number is always greater than 5'
             return 'Given number {} is not perfect'.format(self.iValue)
-            
+
     def checkPrime(self):
         isPrime = True
         if(self.iValue == 0 or self.iValue == 1 or self.iValue == 2 ):
@@ -106,3 +106,4 @@ def main():
     print(A6.checkPrime(), A6.getFactors(), A6.getSumFactors(), A6.checkPerfect(), A6.getPerfectNumberMessage() )
 if __name__ == '__main__' :
     main()
+
