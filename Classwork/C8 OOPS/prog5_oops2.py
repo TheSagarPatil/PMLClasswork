@@ -27,7 +27,7 @@ def printValuesOfInstance(INST, CLASS)->None:
     #print('Arguments of this methods were:', locals())
     
 def main():
-    d = Demo()
+    d:Demo = Demo()
     d2 = Demo()
     printValuesOfInstance(d, Demo)
     printValuesOfInstance(d2, Demo)
