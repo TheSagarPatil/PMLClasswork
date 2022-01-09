@@ -55,14 +55,20 @@ its sum of numbers is {self.getSum()}
             return 1
         
 def main():
+    INPUT = 5
+    print(f"""Display Sum of numbers for input 879:-> 24""")
     R = RecursionDemo(879)
-    R.display5StarPattern(5)
+    print(f"""Display Following pattern for input {INPUT}: * * * * * """)
+    R.display5StarPattern(INPUT)
     print('')
-    R.displayFirst5(5)
+    print(f"""Display Following pattern for input {INPUT}: 1 2 3 4 5 """)
+    R.displayFirst5(INPUT)
     print('')
-    R.displayFirst5Reverse(5)
+    print(f"""Display Following pattern for input {INPUT}: 5 4 3 2 1 """)
+    R.displayFirst5Reverse(INPUT)
     print('')
-    print(R.getFactorial(5))
+    print(f"""Display Factorial : {INPUT} -> 120  """)
+    print(f"Factorial of {INPUT} is {R.getFactorial(5)}")
 
 if __name__ == '__main__':
     main()
