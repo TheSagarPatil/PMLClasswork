@@ -53,7 +53,7 @@ its sum of numbers is {self.getSum()}
             return num * self.getFactorial(num-1)
         else:
             return 1
-        
+
 def main():
     INPUT = 5
     print(f"""Display Sum of numbers for input 879:-> 24""")
@@ -70,5 +70,8 @@ def main():
     print(f"""Display Factorial : {INPUT} -> 120  """)
     print(f"Factorial of {INPUT} is {R.getFactorial(5)}")
 
+    arr = [1,2,3]
+    arrCentre = len(arr)//2
+    print(arr, arrCentre)
 if __name__ == '__main__':
     main()
