@@ -1,4 +1,11 @@
 class RecursionDemo():
+    """
+    @help
+    Represents Recursion class
+
+    @param {} none
+    
+    """
     def __init__(self, num):
         self.num = num
         print()
