@@ -36,22 +36,19 @@ class Walker(object):
                         self.walked_files[MD5_HASH] = paths
                         continue
                     if MD5_HASH in self.walked_files:
-                        
-                        #paths = self.duplicate_files[MD5_HASH]
                         paths= []
                         if MD5_HASH in self.duplicate_files:
                             paths=[*paths, *self.duplicate_files[MD5_HASH] ]
-                        print('duplicate')
                         paths.append(filepath)
                         self.duplicate_files[MD5_HASH] = paths
-                        print(self.duplicate_files[MD5_HASH])
+                        #print('duplicate file',self.duplicate_files[MD5_HASH])
                 except Exception as e:
                     print(f'{e} File error has occured {filepath}\n')
             #print(f'Exists {MD5_HASH in self.walked_files}')
             #print(f'Current Directory : {root}', end = '\r')
             #T.sleep(0.01)
         
-        print('\nEnd of walk00', self.walked_files)
+        #print('\nEnd of walk00', self.walked_files)
         #print(JSON.dumps(self.walked_files, indent=2))
         report = self.duplicate_files 
         print(report)

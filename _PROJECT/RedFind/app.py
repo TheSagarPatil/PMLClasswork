@@ -31,17 +31,17 @@ def print_explorable_paths(PATHS):
     for path in EXPLORABLE_PATHS:
         r = Walker(path).walk()
         print("R = ", r) 
-        if not r:
-            report.update(r)
+        report.update(r)
+    
     return report 
     
 def write_report_file(path, report):
+    print(f'REPORT {report}')
     report_file=open(path,'w')
     #report_file.write(report)
     try :
         report_file.seek(0)
         JSON.dump(report, report_file, indent=2)
-    
         report_file.close()
     except:
         print("Unable to write file")
