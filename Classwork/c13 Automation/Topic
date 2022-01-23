@@ -1,0 +1,14 @@
+pip install schedule
+
+Arguments must be given from as CLA
+python abc.py -abc -def
+argv = ['abc.py','-abc','-def']
+
+prob step = >
+run a task periodically
+task : Every 60 min
+take folder cmdline 
+collect duplicate files
+delete them
+send duiplicate list to mail
+max throughput in min h/w movement

@@ -9,10 +9,10 @@ class RecursionDemo():
     def __init__(self, num):
         self.num = num
         print()
-        
         print(f"""Given number is {self.num}
 its sum of numbers is {self.getSum()}
         """)
+
     def getSum(self):
         self.n = self.num
         sum = 0

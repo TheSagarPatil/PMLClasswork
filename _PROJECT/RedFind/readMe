@@ -1,0 +1,9 @@
+Problem statement = >
+Walk through the OS every hour (Default) or given user time in settings.JSON
+Take C: as command line arg, or paths from "paths" in settings.json
+
+Make a list of duplicate files, store the file on computer C:/duplicates.
+delete put them in recycle bin one by one
+send duiplicate file list on mail mentioned in settings.json 
+
+Fundamental adherance : max throughput sdasdasd

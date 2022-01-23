@@ -1,0 +1,13 @@
+{
+    "email":"bakasur24@gmail.com",
+    "explore_paths":[
+        "H:\\F1"
+    ],
+    "report_paths":[
+        "E:\\dupreport.json"
+    ],
+    "scheduleFrequency":{
+        "intervalInt" : "5",
+        "interval":"Minutes"
+    }
+}
