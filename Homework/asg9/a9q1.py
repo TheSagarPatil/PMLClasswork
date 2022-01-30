@@ -19,7 +19,7 @@ def printIfFileExist( fileExistsFlg :bool , fileName : str )->None:
         @Returns : None
         @Algorithm : Checks if file exits or not and prints <file name> exits or not accordingly
     """
-    log(f"File {fileName} : {'exists' if fileExistsFlg == True else 'does not exist'}")
+    log(f"File {fileName} : {'does exist' if fileExistsFlg == True else 'does not exist'}")
 
 def fileExists( INPUT_FILE : str )->bool:
     """ 
@@ -50,7 +50,7 @@ def printFileData(fileName, data):
     log(f"Data in file is \n{data}")
     log(f"End of file {fileName}")
 
-def copyData(fileName, data):
+def writeData(fileName, data):
     fileObj = open(fileName, 'w')
     fileObj.write(data)
     fileObj.close()
@@ -66,7 +66,7 @@ def main() ->None :
         if(fileExist):
             data = readFileData(INPUT_FILE)
             printFileData(INPUT_FILE, data)
-            copyData("abcd.txt", data)
+            writeData("abcd.txt", data)
     else:
         log('No file provided')
 
