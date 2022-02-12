@@ -1,7 +1,8 @@
+"""
+Get details of running processes 
+print a log of that on a file and console
+"""
 
-"""
-Get details of running processes and show them
-"""
 import psutil as PSU
 import json as JSON
 
@@ -15,10 +16,10 @@ def getProcessDetail() -> list[dict]:
         except (PSU.NoSuchProcess, PSU.AccessDenied, PSU.ZombieProcess):
             print('Error occured in collecting data')
         finally:
-            sortedProcessses = sorted(processes, key= lambda i:i['usage'], reverse=True)
+            sortedProcessses = sorted(processes, key=lambda i:i['usage'], reverse=True)
     return sortedProcessses
 
-def killProcess(processes :dict, processName :str):
+def killProcess(processes :dict, processName :str) -> None:
     similarProc : list[dict] = []
     for proc in processes:
         if(processName in proc['name'] ):
@@ -27,7 +28,7 @@ def killProcess(processes :dict, processName :str):
         for proc in similarProc:
             print(f'{proc["name"]} is found')
     else:
-        print(f'No processes found')
+        print(f"""No similar processes to "{processName}" was found""")
 
 def main() -> None:
     processes = getProcessDetail()
