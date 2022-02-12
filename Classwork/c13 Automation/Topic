@@ -12,3 +12,7 @@ collect duplicate files
 delete them
 send duiplicate list to mail
 max throughput in min h/w movement
+
+call 50 times KNN by changing value of k from 3 to 53
+
+store result in list use thread

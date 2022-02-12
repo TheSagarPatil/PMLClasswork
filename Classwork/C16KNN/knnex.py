@@ -1,3 +1,4 @@
+from matplotlib import pyplot as plt
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 import mglearn as MGL
@@ -52,15 +53,33 @@ def main():
         alpha=0.2
     )
 
-    knn = KNN(n_neighbors=  1)
-    knn.fit(X_train, y_train)
+    score : list = []
+    for i in range(3, 54, 2):
 
-    res = knn.predict(X_test)
-    print(f'Test predictions, {res}')
+        knn = KNN(n_neighbors=  i)
+        knn.fit(X_train, y_train)
 
-    print( f'Test score : { NP.mean( "y_pred" == y_test ) :.2f} ') 
-    print(f'Test set score : { knn.score(X_test, y_test) :.2f}')
+        res = knn.predict(X_test)
+        print(f'Test predictions, {res}')
+        scr = knn.score(X_test, y_test)
+        print( f'Test score : { NP.mean( "y_pred" == y_test ) :.2f} ') 
+        print(f'Test set score : { scr :.2f}')
 
+        score.append({'neighbors':i,'score':scr})
+    print(score)
+    X = []
+    Y = []
+
+    for item in score:
+        X.append(item['neighbors'])
+        Y.append(item['score'])
+    
+    from matplotlib import pyplot as PLT
+    PLT.plot(X,Y)
+    PLT.xlabel('Neighbors')
+    PLT.ylabel('Score')
+
+    PLT.show()
 
 if __name__ == '__main__':
     main()
