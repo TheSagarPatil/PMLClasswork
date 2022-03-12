@@ -40,7 +40,7 @@ def diab():
         init = 'k-means++',
         max_iter = 300,
         n_init = 10,
-        random_state = 0 
+        random_state = 0
     )
     y_kmeans = kmeans.fit_predict(x)
 
