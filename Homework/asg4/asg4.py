@@ -5,10 +5,10 @@ Q1List = [4,6]
 
 print(list(map(lambdaPowerOfTwo, Q1List)))
 
-#NUmbers which are greater or equal to 70 AND less/equal to 90 
+#NUmbers which are greater or equal to 70 AND less/equal to 90
 filterLessEq70GAndreatEq90 = lambda x:x>= 70 and x<=90
 Q3List = [4,34,36,70,68,24,89,23,86,90,45,70]
-print(list(filter(filterLessEq70GAndreatEq90, Q3List)))
+print('Q3', list(filter(filterLessEq70GAndreatEq90, Q3List)))
 
 Q4List = [5,2,3,4,3,4,1,2,8,0]
 #Filter : Even odd
@@ -28,7 +28,7 @@ Q5List = [2,30,11,10,17,23,31,77]
 #map mul by 2
 #reduce max
 isPrime = lambda x: all(x%(n) != 0 for n in range(2,x,1))
-getMax = lambda x,y: max(x,y) 
+getMax = lambda x,y: max(x,y)
 mulByTwo = lambda x:x*2
 fOut = list(filter(isPrime, Q5List))
 print(fOut)

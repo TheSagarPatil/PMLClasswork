@@ -1,5 +1,5 @@
 """
-Get details of running processes 
+Get details of running processes
 print a log of that on a file and console
 """
 
@@ -27,6 +27,7 @@ def killProcess(processes :dict, processName :str) -> None:
     if (len(similarProc)>0):
         for proc in similarProc:
             print(f'{proc["name"]} is found')
+            #os.kill(proc, signal.sig)
     else:
         print(f"""No similar processes to "{processName}" was found""")
 
